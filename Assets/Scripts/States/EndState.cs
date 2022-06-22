@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndState : MonoBehaviour
+namespace PN.Battle
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EndState : IState
     {
-        
+        public IState DoState(BattleManager bm)
+        {
+            return this;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

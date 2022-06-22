@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PN.Battle
 {
-    public class BattleManager : BattleSM
+    public class BattleManager : MonoBehaviour
     {
         public UnitController p1;
         public UnitController p2;
@@ -13,6 +13,8 @@ namespace PN.Battle
 
         public StartState startState = new StartState();
         public AttackState attackState = new AttackState();
+        public CounterState counterState = new CounterState();
+        public RunToState runToState = new RunToState();
 
         // Start is called before the first frame update
         private void OnEnable()
@@ -21,7 +23,7 @@ namespace PN.Battle
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             if (currentState != null)
             {

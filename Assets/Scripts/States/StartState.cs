@@ -20,7 +20,7 @@ namespace PN.Battle
             bm.p2.setEnemy(bm.p1);
             bm.p1.setID(1);
             bm.p2.setID(2);
-            return new AttackState().DoState(bm);
+            return bm.runToState;
         }
     }
 }

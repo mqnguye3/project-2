@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class UnitController : MonoBehaviour
     private string current_anim;
     private int id;
 
-
+    private int counter = 3;
 
     private void Awake()
     {
@@ -22,9 +23,9 @@ public class UnitController : MonoBehaviour
 
     }
 
-    public void setEnemy(UnitController e)
+    public void setEnemy(UnitController target)
     {
-        enemy = e;
+        enemy = target;
     }
 
 
@@ -57,14 +58,9 @@ public class UnitController : MonoBehaviour
         return target_pos;
     }
 
-    /* TODO: 
-        Buff,
-        Death,
-        Win,
-        Lose
-    */
 
-    public void Attack()
+    // animation event: frame that attack connects with enemy
+    public void AttackConnect()
     {
         enemy.Hurt();
     }
@@ -75,25 +71,62 @@ public class UnitController : MonoBehaviour
         SetAnimation(id + "_hurt");
     }
 
+
+    //animation event: last frame of any attack anim
     private void ReturnToIdle()
     {
         SetAnimation(id + "_idle");
-    }
-
-    public bool Run(Vector3 target)
-    {
-        if (transform.position != target_pos)
-        {
-            SetAnimation(id + "_run");
-            transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * 5);
-            return false;
-        }
-        return true;
     }
 
     public void setID(int i)
     {
         id = i;
     }
+    public int getID()
+    {
+        return id;
+    }
 
+
+    public bool isPlaying()
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName(id + "_idle"))
+            return false;
+        else
+            return true;
+    }
+    public void decCounter()
+    {
+
+        counter--;
+    }
+
+    public bool canCounter()
+    {
+        if (counter > 0)
+        {
+            Debug.Log(counter);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    public void DoAnimation(string trigger)
+    {
+        anim.Play(trigger);
+    }
+
+    public bool animFinish()
+    {
+        // if (anim.GetCurrentAnimatorStateInfo(0).IsName(id + "_idle")) return true;
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("1_hit") &&
+           anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            return false;
+        else
+            return true;
+    }
 }
