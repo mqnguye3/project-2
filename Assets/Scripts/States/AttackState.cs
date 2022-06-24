@@ -8,26 +8,27 @@ namespace PN.Battle
     {
         public IState DoState(BattleManager bm)
         {
-            Attack(bm);
-            if (bm.p1.isPlaying() == false)
-            {
-                return bm.counterState;
-            }
-            else
-            {
-                return this;
-            }
+            // Attack(bm);
+            // if (bm.p1.isPlaying() == false)
+            // {
+            //     return bm.counterState;
+            // }
+            // else
+            // {
+            //     return this;
+            // }
+            return this;
         }
 
-        private void Attack(BattleManager bm)
-        {
-            bm.p1.SetAnimation("1_hit");
-        }
+        // private void Attack(BattleManager bm)
+        // {
+        //     bm.p1.SetAnimation("1_hit");
+        // }
 
-        private void SetDestination(BattleManager bm)
-        {
-            bm.p1.setTargetPosition(bm.p1.getStartingPosition());
-            bm.p1.transform.Rotate(0, -180, 0);
-        }
+        // private void SetDestination(BattleManager bm)
+        // {
+        //     bm.p1.setTargetPosition(bm.p1.getStartingPosition());
+        //     bm.p1.transform.Rotate(0, -180, 0);
+        // }
     }
 }
