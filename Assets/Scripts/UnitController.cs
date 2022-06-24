@@ -12,7 +12,7 @@ public class UnitController : MonoBehaviour
     private string current_anim;
     private int id;
 
-    //private int counter = 3;
+    private int counter = 3;
 
     private void Awake()
     {
@@ -69,5 +69,15 @@ public class UnitController : MonoBehaviour
     public int getID()
     {
         return id;
+    }
+
+    public int getCounter()
+    {
+        return counter;
+    }
+
+    public void decCounter()
+    {
+        counter--;
     }
 }

@@ -28,11 +28,18 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private UnitController Player1, Player2;
     [SerializeField] private AnimationManager Anim1, Anim2;
 
+
+    //maybe instead of UnitController & Animation Manager, just GameObject then call the managers.
     private UnitController curr_player;
     private AnimationManager curr_anim;
+
+    private UnitController enemy_player;
+    private AnimationManager enemy_anim;
+
+
     private enum State
     {
-        ATTACK, BUSY,
+        ATTACK, COUNTER, BUSY,
         RUN, END
     }
 
@@ -47,6 +54,7 @@ public class BattleSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (enemy_anim.isAnimPlaying() == true) return;
         if (curr_anim.isAnimPlaying() == false)
         {
             ResetState();
@@ -55,26 +63,38 @@ public class BattleSystem : MonoBehaviour
         switch (currentState)
         {
             case State.ATTACK:
-                currentState = State.BUSY;
                 if (curr_player.transform.position != curr_player.getTargetPosition())
                 {
                     currentState = State.RUN;
-                    return;
+                    break;
                 }
 
-                ATTACK_PHASE(curr_player.getID(), () =>
+                ATTACK(curr_player.getID(), curr_anim, () =>
                 {
-                    currentState = State.RUN;
                 });
+                currentState = State.COUNTER;
+
                 break;
 
             case State.RUN:
-                currentState = State.BUSY;
                 if (curr_player.transform.position != curr_player.getStartingPosition())
                 {
                     curr_player.setTargetPosition(curr_player.getStartingPosition());
                 }
                 StartCoroutine(RunTo());
+                break;
+
+
+            case State.COUNTER:
+                currentState = State.BUSY;
+                if (enemy_player.getCounter() > 0)
+                {
+                    enemy_player.decCounter();
+                    ATTACK(enemy_player.getID(), enemy_anim, () =>
+                    {
+                        currentState = State.RUN;
+                    });
+                }
                 break;
         }
 
@@ -114,9 +134,9 @@ public class BattleSystem : MonoBehaviour
         SetCurrentPlayer();
     }
 
-    private void ATTACK_PHASE(int id, Action onComplete)
+    private void ATTACK(int id, AnimationManager anim, Action onComplete)
     {
-        curr_anim.PlayAnimation(id + "_hit");
+        anim.PlayAnimation(id + "_hit");
         onComplete();
     }
 
@@ -127,8 +147,8 @@ public class BattleSystem : MonoBehaviour
 
     private void ResetState()
     {
-        Anim1.PlayAnimation("1_idle");
-        Anim2.PlayAnimation("2_idle");
+        Anim1.PlayAnimation(Player1.getID() + "_idle");
+        Anim2.PlayAnimation(Player2.getID() + "_idle");
     }
 
     private void SetCurrentPlayer()
@@ -137,12 +157,18 @@ public class BattleSystem : MonoBehaviour
         {
             curr_player = Player2;
             curr_anim = Anim2;
+
+            enemy_player = Player1;
+            enemy_anim = Anim1;
         }
         else
         {
             curr_player = Player1;
             curr_anim = Anim1;
 
+
+            enemy_player = Player2;
+            enemy_anim = Anim2;
         }
     }
 

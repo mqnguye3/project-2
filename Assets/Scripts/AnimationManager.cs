@@ -24,7 +24,7 @@ namespace PN.Animation
 
         public void PlayAnimation(string new_anim)
         {
-            if (!new_anim.Contains("idle"))
+            if (!new_anim.Contains("idle") && !new_anim.Contains("hurt"))
             {
                 isPlaying = true;
             }
