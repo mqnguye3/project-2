@@ -8,7 +8,8 @@ namespace PN.Battle
     {
         public IState DoState(BattleManager bm)
         {
-            return this;
+            bm.SetUp();
+            return bm.startState;
         }
     }
 

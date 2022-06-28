@@ -24,15 +24,10 @@ namespace PN.Animation
 
         public void PlayAnimation(string new_anim)
         {
-            if (!new_anim.Contains("idle") && !new_anim.Contains("hurt"))
-            {
-                isPlaying = true;
-            }
             if (isAlreadyPlaying(new_anim) == false)
             {
                 anim.Play(new_anim);
             }
-
         }
         public void setAnimationDone()
         {
@@ -55,7 +50,15 @@ namespace PN.Animation
                 curr_anim = new_anim;
                 return false;
             }
+        }
 
+        public void PlayAnimation(string attack_anim, bool isPlaying)
+        {
+            this.isPlaying = isPlaying;
+            if (isAlreadyPlaying(attack_anim) == false)
+            {
+                anim.Play(attack_anim);
+            }
         }
     }
 

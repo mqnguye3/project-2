@@ -5,7 +5,7 @@ using UnityEngine;
 namespace PN.Battle
 {
     public interface IState
-    {   
+    {
         IState DoState(BattleManager bm);
     }
 

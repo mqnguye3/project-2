@@ -8,36 +8,15 @@ namespace PN.Battle
     {
         public IState DoState(BattleManager bm)
         {
-            // if (bm.p2.canCounter())
-            // {
-            //     Attack(bm);
-
-            // }
-            // if (bm.p2.isPlaying() == false)
-            // {
-            //     SetDestination(bm);
-            //     return bm.runToState;
-            // }
-            // else
-            // {
-            //     return this;
-            // }
-
-            return this;
-
+            //TODO: Check to see if in range to counter, some skills cannot be countered ie, bomb
+            if (bm.enemy_player.getCounter() > 0)
+            {
+                bm.enemy_anim.PlayAnimation(bm.enemy_player.getID() + "_hit", true);
+                bm.enemy_player.decCounter();
+            }
+            return bm.runToState;
 
         }
-
-        // private void Attack(BattleManager bm)
-        // {
-        //     bm.p2.SetAnimation("2_hit");
-        // }
-
-        // private void SetDestination(BattleManager bm)
-        // {
-        //     bm.p1.setTargetPosition(bm.p1.getStartingPosition());
-        //     bm.p1.transform.Rotate(0, -180, 0);
-        // }
     }
 
 }
