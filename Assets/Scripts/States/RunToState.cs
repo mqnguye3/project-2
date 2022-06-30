@@ -30,7 +30,7 @@ namespace PN.Battle
             bm.curr_player.transform.right = bm.curr_player.transform.position - dest;
 
 
-            bm.curr_anim.PlayAnimation(bm.curr_player.getID() + "_run", true);
+            bm.curr_anim.PlayAnimation(bm.curr_player.getID(), "_run", true);
             while (bm.curr_player.transform.position != dest)
             {
                 bm.curr_player.transform.position = Vector3.MoveTowards(bm.curr_player.transform.position, dest, Time.deltaTime * 5);

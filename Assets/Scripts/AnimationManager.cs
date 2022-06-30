@@ -8,6 +8,7 @@ namespace PN.Animation
     public class AnimationManager : MonoBehaviour
     {
         private Animator anim;
+        [SerializeField] private Animator wep_anim;
         private bool isPlaying = false;
 
         private string curr_anim;
@@ -22,11 +23,12 @@ namespace PN.Animation
         }
 
 
-        public void PlayAnimation(string new_anim)
+        public void PlayAnimation(int id, string new_anim)
         {
             if (isAlreadyPlaying(new_anim) == false)
             {
-                anim.Play(new_anim);
+                anim.Play(id + new_anim);
+                wep_anim.Play("wep_" + id + new_anim);
             }
         }
         public void setAnimationDone()
@@ -52,12 +54,13 @@ namespace PN.Animation
             }
         }
 
-        public void PlayAnimation(string attack_anim, bool isPlaying)
+        public void PlayAnimation(int id, string attack_anim, bool isPlaying)
         {
             this.isPlaying = isPlaying;
             if (isAlreadyPlaying(attack_anim) == false)
             {
-                anim.Play(attack_anim);
+                anim.Play(id + attack_anim);
+                wep_anim.Play("wep_" + id + attack_anim);
             }
         }
     }

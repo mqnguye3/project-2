@@ -59,7 +59,7 @@ public class UnitController : MonoBehaviour
 
     public void Hurt()
     {
-        anim.PlayAnimation(id + "_hurt");
+        anim.PlayAnimation(id, "_hurt");
     }
 
     public void setID(int i)
