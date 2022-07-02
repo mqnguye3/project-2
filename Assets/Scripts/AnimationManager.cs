@@ -28,7 +28,7 @@ namespace PN.Animation
             if (isAlreadyPlaying(new_anim) == false)
             {
                 anim.Play(id + new_anim);
-                wep_anim.Play("wep_" + id + new_anim);
+                wep_anim.Play(new_anim);
             }
         }
         public void setAnimationDone()
@@ -60,7 +60,7 @@ namespace PN.Animation
             if (isAlreadyPlaying(attack_anim) == false)
             {
                 anim.Play(id + attack_anim);
-                wep_anim.Play("wep_" + id + attack_anim);
+                wep_anim.Play(attack_anim);
             }
         }
     }
