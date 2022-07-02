@@ -64,8 +64,8 @@ namespace PN.Battle
 
         public void ResetState()
         {
-            anim1.PlayAnimation(player1.getID() + "_idle");
-            anim2.PlayAnimation(player2.getID() + "_idle");
+            anim1.PlayAnimation(player1.getID(), "_idle");
+            anim2.PlayAnimation(player2.getID(), "_idle");
         }
 
 

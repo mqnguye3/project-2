@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: claw2 override
+  m_Controller: {fileID: 9100000, guid: ac62dfc32f5e2f84d93b7cbaec59e56c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 61228723cdf69f3469eeb455f13c2429, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6abb50e863f4c9c4cb70d7e048b74628, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 051756db409f2c14aaf451b73ef5b76f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 74c02170c36fb3b41a44ff4f65426690, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e31f4ec7ec343e1469d9e4d2a04f18ad, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 456885be3b0e26441a8c7dba112e2839, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6a73ed740610fbd4da88cadd855c4724, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 31fa4306f7eae864a81545d72ab5fa1d, type: 2}
