@@ -214,6 +214,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4542194876709238357, guid: 2d95743eebc8b344ea4e4f3473444f41, type: 3}
+      propertyPath: skills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4542194876709238357, guid: 2d95743eebc8b344ea4e4f3473444f41, type: 3}
+      propertyPath: skills.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6427b6f0f8816c743b527e7e137a0b5a, type: 2}
     - target: {fileID: 1187866318, guid: 2d95743eebc8b344ea4e4f3473444f41, type: 3}
       propertyPath: m_Controller
       value: 
@@ -362,6 +370,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7686721133812794817, guid: da80e03ce26b3d04a9c6b9ec3b71b48a, type: 3}
+      propertyPath: skills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686721133812794817, guid: da80e03ce26b3d04a9c6b9ec3b71b48a, type: 3}
+      propertyPath: skills.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6427b6f0f8816c743b527e7e137a0b5a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da80e03ce26b3d04a9c6b9ec3b71b48a, type: 3}
 --- !u!114 &908699093 stripped

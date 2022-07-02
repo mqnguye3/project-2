@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8543dee1506d04c4da03b2612b12db6b, type: 3}
   m_Name: BasicAttack
   m_EditorClassIdentifier: 
+  procRate: 1
+  skillID: 0
+  type: 4
+  playerAttack: _hit
+  enemyHurt: _hurt
+  withWeapon: 1
