@@ -1,7 +1,7 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using PN.Animation;
+using PN.Abilities;
+using System.Collections.Generic;
 
 public class UnitController : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class UnitController : MonoBehaviour
     private Vector3 target_pos;
     private string current_anim;
     private int id;
+
+    [SerializeField] List<AttackSkill> skills = new List<AttackSkill>();
 
     private int counter = 3;
 
@@ -79,5 +81,10 @@ public class UnitController : MonoBehaviour
     public void decCounter()
     {
         counter--;
+    }
+
+    public AttackSkill getAbility()
+    {
+        return skills[0];
     }
 }

@@ -14,7 +14,13 @@ namespace PN.Battle
             }
             else
             {
-                bm.curr_anim.PlayAnimation(bm.curr_player.getID(), "_hit", true);
+                /*
+                TODO:
+                1. grab skill arr
+                2. pass in attack skill.animation
+                3. do dmg
+                */
+                bm.curr_anim.PlayAnimation(bm.curr_player.getID(), bm.curr_player.getAbility().playerAttack, true);
                 return bm.counterState;
             }
 
