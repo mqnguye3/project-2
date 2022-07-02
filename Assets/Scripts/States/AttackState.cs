@@ -14,7 +14,7 @@ namespace PN.Battle
             }
             else
             {
-                bm.curr_anim.PlayAnimation(bm.curr_player.getID() + "_hit", true);
+                bm.curr_anim.PlayAnimation(bm.curr_player.getID(), "_hit", true);
                 return bm.counterState;
             }
 
