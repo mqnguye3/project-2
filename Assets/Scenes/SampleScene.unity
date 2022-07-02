@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d25fa943658db847afd709994d84754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon_override: {fileID: 11400000, guid: 0ed5eb649e870774785169b03078cba7, type: 2}
+  weapon_override: {fileID: 11400000, guid: 72257b98d9f0b734aaa56f5e3827c38d, type: 2}
 --- !u!114 &1510435454 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1510435454, guid: 2d95743eebc8b344ea4e4f3473444f41, type: 3}
@@ -569,4 +569,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d25fa943658db847afd709994d84754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon_override: {fileID: 11400000, guid: 7455d61f209d1504c9a4000bc9525c6e, type: 2}
+  weapon_override: {fileID: 11400000, guid: 0a851fefc4075f44b9314f83d1cd75c0, type: 2}

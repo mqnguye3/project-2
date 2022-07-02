@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: sharp2 override
+  m_Controller: {fileID: 9100000, guid: bdc6f1c52701b6c40a27c3062368371a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 50c0773dab4b24f4791878905176b849, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7188482387de39b47b64ce4ff56ee83c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: da5b8bd58254de14d9e369924669235b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b707987ab13db524d8d3c0c386038959, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7dbd43dc13fd3ee4db8059c06dc638c4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3c6e4b2390777714cb57a376b0ea4008, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a54b889eddb9dc2478a321d6a80751ee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6a5261193c4e8ad4698cb26f4b79a27b, type: 2}
