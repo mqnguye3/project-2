@@ -1,16 +1,18 @@
 using UnityEngine;
+using System.Collections.Generic;
+using PN.Stats;
 using PN.Animation;
 using PN.Abilities;
-using System.Collections.Generic;
-
-public class UnitController : MonoBehaviour
+public class AttackManager : MonoBehaviour
 {
     private AnimationManager anim;
     private Vector3 starting_pos;
-    private UnitController enemy;
+    private AttackManager enemy;
     private Vector3 target_pos;
     private string current_anim;
     private int id;
+
+    private Stats stats;
 
     [SerializeField] List<AttackSkill> skills = new List<AttackSkill>();
 
@@ -24,9 +26,10 @@ public class UnitController : MonoBehaviour
             Debug.Log("Unit Controller: animator null ref");
         }
 
+        stats = GetComponent<Stats>();
     }
 
-    public void setEnemy(UnitController target)
+    public void setEnemy(AttackManager target)
     {
         enemy = target;
     }
@@ -55,12 +58,14 @@ public class UnitController : MonoBehaviour
     // animation event: frame that attack connects with enemy
     public void AttackConnect()
     {
+
         enemy.Hurt();
     }
 
 
     public void Hurt()
     {
+        stats.takeDamage(10);
         anim.PlayAnimation(id, "_hurt");
     }
 

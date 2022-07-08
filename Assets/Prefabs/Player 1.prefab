@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1094795967}
   - component: {fileID: 1094795969}
   - component: {fileID: 1094795968}
+  - component: {fileID: 2122839337}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: Sharp Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094795966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.45, z: 0}
+  m_LocalPosition: {x: 0.04, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +44,7 @@ Animator:
   m_GameObject: {fileID: 1094795966}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a5f0711f907472478083e6a84b0ac74, type: 2}
+  m_Controller: {fileID: 9100000, guid: bdc6f1c52701b6c40a27c3062368371a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -99,12 +100,25 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42, y: 0.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2122839337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094795966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d25fa943658db847afd709994d84754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon_override: {fileID: 11400000, guid: 0a851fefc4075f44b9314f83d1cd75c0, type: 2}
 --- !u!1 &5778501248363497994
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +132,7 @@ GameObject:
   - component: {fileID: 5778501248363497995}
   - component: {fileID: 7686721133812794817}
   - component: {fileID: 1075472091}
+  - component: {fileID: 1075472092}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -225,6 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4828ef30fef3540b0ce3451bc2775b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skills:
+  - {fileID: 11400000, guid: 6427b6f0f8816c743b527e7e137a0b5a, type: 2}
 --- !u!114 &1075472091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +254,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189aa6954e2d79e4db72ea209e4d529a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wep_anim: {fileID: 1094795969}
+--- !u!114 &1075472092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778501248363497994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21ac6c038f88894e849e9d2ff3eda23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  health: 35
+  chakra: 50
