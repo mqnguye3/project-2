@@ -7,13 +7,13 @@ namespace PN.Battle
 {
     public class BattleManager : MonoBehaviour
     {
-        public UnitController player1, player2;
+        public AttackManager player1, player2;
         [SerializeField] private AnimationManager anim1, anim2;
 
-        public UnitController curr_player { get; private set; }
+        public AttackManager curr_player { get; private set; }
         public AnimationManager curr_anim { get; private set; }
 
-        public UnitController enemy_player { get; private set; }
+        public AttackManager enemy_player { get; private set; }
         public AnimationManager enemy_anim { get; private set; }
 
 

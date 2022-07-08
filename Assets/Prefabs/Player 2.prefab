@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1110490344582024409}
   - component: {fileID: 1187866318}
   - component: {fileID: 1187866317}
+  - component: {fileID: 1187866320}
   m_Layer: 0
   m_Name: Glove Weapon
   m_TagString: Untagged
@@ -43,7 +44,7 @@ Animator:
   m_GameObject: {fileID: 7747060818316939541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e2521e260cf4cc4e8c8fb6e2e655ef4, type: 2}
+  m_Controller: {fileID: 9100000, guid: ac62dfc32f5e2f84d93b7cbaec59e56c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,6 +106,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1187866320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747060818316939541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d25fa943658db847afd709994d84754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon_override: {fileID: 11400000, guid: 72257b98d9f0b734aaa56f5e3827c38d, type: 2}
 --- !u!1 &9156665651550987070
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +132,7 @@ GameObject:
   - component: {fileID: 9156665651550987064}
   - component: {fileID: -4542194876709238357}
   - component: {fileID: 1510435454}
+  - component: {fileID: 1510435455}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -225,6 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4828ef30fef3540b0ce3451bc2775b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skills:
+  - {fileID: 11400000, guid: 6427b6f0f8816c743b527e7e137a0b5a, type: 2}
 --- !u!114 &1510435454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,3 +255,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wep_anim: {fileID: 1187866318}
+--- !u!114 &1510435455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9156665651550987070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21ac6c038f88894e849e9d2ff3eda23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  health: 20
+  chakra: 50
