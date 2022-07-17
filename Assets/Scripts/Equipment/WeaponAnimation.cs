@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PN.Weapons;
+using PN.Equipment;
 
 public class WeaponAnimation : MonoBehaviour
 {

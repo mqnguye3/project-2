@@ -15,3 +15,6 @@ MonoBehaviour:
   weaponType: 0
   weaponId: 0
   weapon_override: {fileID: 22100000, guid: 6b35ed31e0685e0488e96b31f70fb628, type: 2}
+  icon: {fileID: 21300000, guid: d98cca81f4d976140bfdd8ba038382d1, type: 3}
+  height: 0
+  width: 0
