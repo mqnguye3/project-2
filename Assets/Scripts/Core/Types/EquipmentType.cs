@@ -16,7 +16,7 @@ namespace PN.Equipment
         Boots,
         Ring,
         Outfit,
-        Glove,
+        Gloves,
         Chest
     }
 }

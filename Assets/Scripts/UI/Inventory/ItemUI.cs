@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 namespace PN.UI
 {
-    public class Item : Draggables
+    public class ItemUI : Draggables
     {
 
 

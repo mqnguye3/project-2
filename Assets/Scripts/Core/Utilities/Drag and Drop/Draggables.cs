@@ -66,7 +66,10 @@ namespace PN.UI
             //check if you are hovering over the same spot the item is already in
             if (object.ReferenceEquals(slot, parentSlot)) return;
 
-            if (slot.GetItem() == null || parentSlot.GetItem() == null)
+            //check if item target location is suitible equipment slot (ie, return if you're trying to put boots in helm slot, etc)
+            if (!slot.CheckItem(parentSlot.GetItem())) return;
+
+            if (slot.GetItem() == null)
             {
                 //check if there is an item inside of slot and pointed slot
                 //if any is true then just drop currently held item inside of slot
