@@ -11,13 +11,10 @@ namespace PN.UI
         [SerializeField] EquipmentType equipmentType;
         private EquipmentSO equipment;
 
-
-        //TODO:
-        //Set equipmentype and set checks to see if its the correct type before swapping/equipping them
         public void AddItem(ItemSO item)
         {
             equipment = item as EquipmentSO;
-            icon.SetItemIcon(item.GetSprite());
+            icon.SetItemIcon(item);
         }
 
         public ItemSO GetItem()
