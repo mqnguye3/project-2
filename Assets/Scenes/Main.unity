@@ -2723,6 +2723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryContainer: {fileID: 927598562}
+  toggleKey: 105
 --- !u!1 &880207497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,7 +3691,7 @@ GameObject:
   - component: {fileID: 1132424326}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3707,6 +3708,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e4727eac310ac4c8169e3e210a0f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  temp_items:
+  - {fileID: 11400000, guid: f07258fa0aeaa5a48ae504174f986ea7, type: 2}
+  - {fileID: 11400000, guid: 2bde4cec6e0700342b2da1c066176c69, type: 2}
+  - {fileID: 11400000, guid: ccaec8fc7d27e1e4da3acd00e7128cb4, type: 2}
+  - {fileID: 11400000, guid: 9a80a5036bef8514497f4a1b925b3597, type: 2}
+  - {fileID: 11400000, guid: ab11bec1254598646ac79a3db2604d34, type: 2}
+  - {fileID: 11400000, guid: 484ffda495961064a9d8a98cffbb32a8, type: 2}
+  - {fileID: 11400000, guid: 7aa00b1e9746637468ae47c179e125b9, type: 2}
+  - {fileID: 11400000, guid: 36f96c525ae712e4ea1be92a62eced20, type: 2}
+  - {fileID: 11400000, guid: d8d329945b83c554885bb197d50d0691, type: 2}
+  - {fileID: 11400000, guid: 914869e5751f488459eb48ee90210524, type: 2}
+  - {fileID: 11400000, guid: 61f359f509268a044b4f2407245d0a35, type: 2}
+  - {fileID: 11400000, guid: eccd992176ee4c64e83e2e877755c86a, type: 2}
 --- !u!4 &1132424327
 Transform:
   m_ObjectHideFlags: 0
@@ -3715,7 +3730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132424325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0467455, y: -0.5355339, z: 0.04625212}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5467,6 +5482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 5360570774102315404, guid: f8fb291b884ecc7448da07bafeeb4553, type: 3}
+      propertyPath: itemSlotPrefab
+      value: 
+      objectReference: {fileID: 2058163973440445101, guid: 3c072f4402a0e234c994e9b2e716b389, type: 3}
     - target: {fileID: 9027824024866081128, guid: f8fb291b884ecc7448da07bafeeb4553, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

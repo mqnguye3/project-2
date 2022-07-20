@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace PN.UI
 {
-    public class ToggleInventory : MonoBehaviour
+    public class ToggleUI : MonoBehaviour
     {
         [SerializeField] GameObject inventoryContainer = null;
+        [SerializeField] KeyCode toggleKey;
 
         private void Start()
         {
@@ -15,7 +16,7 @@ namespace PN.UI
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(toggleKey))
             {
                 inventoryContainer.SetActive(!inventoryContainer.activeSelf);
             }

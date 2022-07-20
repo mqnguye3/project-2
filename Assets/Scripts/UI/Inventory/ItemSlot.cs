@@ -8,35 +8,33 @@ namespace PN.UI
 {
     public class ItemSlot : MonoBehaviour, IDroppables
     {
-
         [SerializeField] ItemIcon icon = null;
-        [SerializeField] ItemSO item;
 
-        private void Awake()
+        Inventory inventory;
+        int index;
+
+
+        public void SetUp(Inventory inventory, int index)
         {
-            SetUp();
+            this.index = index;
+            this.inventory = inventory;
+            icon.SetItemIcon(inventory.GetItemSlot(index));
+
         }
 
-        private void SetUp()
-        {
-            if (item == null) return;
-
-            AddItem(item);
-        }
         public void AddItem(ItemSO item)
         {
-            this.item = item;
-            icon.SetItemIcon(item.GetSprite());
+            inventory.AddItemToInventory(index, item);
         }
 
         public ItemSO GetItem()
         {
-            return item;
+            return inventory.GetItemSlot(index);
         }
 
         public void RemoveItem()
         {
-            item = null;
+            inventory.RemoveItemFromInventory(index);
             icon.SetItemIcon(null);
         }
 

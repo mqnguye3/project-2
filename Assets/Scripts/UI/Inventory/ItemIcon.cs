@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PN.Equipment;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ namespace PN.UI
     [RequireComponent(typeof(Image))]
     public class ItemIcon : MonoBehaviour
     {
-        public void SetItemIcon(Sprite itemIcon)
+        public void SetItemIcon(ItemSO itemIcon)
         {
             var imageComponent = GetComponent<Image>();
             if (itemIcon == null)
@@ -19,7 +20,7 @@ namespace PN.UI
             else
             {
                 imageComponent.enabled = true;
-                imageComponent.sprite = itemIcon;
+                imageComponent.sprite = itemIcon.GetSprite();
             }
         }
 
