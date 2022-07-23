@@ -40,8 +40,8 @@ namespace PN.UI
 
         public bool CheckItem(ItemSO item)
         {
-            if (item == null) return false;
-            else return true;
+            if (item != null) return true;
+            else return false;
         }
     }
 }

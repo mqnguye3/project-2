@@ -36,7 +36,7 @@ namespace PN.UI
             var equip = item as EquipmentSO;
             if (equip.GetEquipmentType() == equipmentType) return true;
 
-            return false;
+            else return false;
         }
     }
 
