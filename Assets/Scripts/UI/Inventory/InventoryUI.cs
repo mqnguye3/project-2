@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PN.Equipment;
+using PN.Inventory;
 using System;
 
 namespace PN.UI
 {
     public class InventoryUI : MonoBehaviour
     {
-        private Inventory playerInventory;
+        private PlayerInventory playerInventory;
         [SerializeField] ItemSlot itemSlotPrefab;
 
         private void Awake()
         {
-            playerInventory = Inventory.GetPlayerInventory();
+            playerInventory = PlayerInventory.GetPlayerInventory();
             playerInventory.updateInventory += UpdateInventoryUI;
         }
 

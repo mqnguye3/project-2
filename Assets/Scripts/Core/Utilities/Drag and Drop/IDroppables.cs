@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using PN.Equipment;
+using PN.Inventory;
 using UnityEngine;
 
 

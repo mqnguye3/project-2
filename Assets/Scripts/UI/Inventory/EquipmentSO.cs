@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PN.Equipment
+namespace PN.Inventory
 {
-
-    [CreateAssetMenu(fileName = "Equipment", menuName = "Inventory/Equipment", order = 0)]
-    public class EquipmentSO : ItemSO
+    public abstract class EquipmentSO : ItemSO
     {
         [SerializeField] EquipmentType equipmentType;
 

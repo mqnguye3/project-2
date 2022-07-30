@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PN.Equipment
+namespace PN.Inventory
 {
-    public class Inventory : MonoBehaviour
+    public class PlayerInventory : MonoBehaviour
     {
 
         public event Action updateInventory;
@@ -24,9 +24,9 @@ namespace PN.Equipment
                 items[i] = temp_items[i];
             }
         }
-        public static Inventory GetPlayerInventory()
+        public static PlayerInventory GetPlayerInventory()
         {
-            var inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
+            var inventory = GameObject.FindWithTag("Player").GetComponent<PlayerInventory>();
             if (inventory != null)
             {
                 return inventory;

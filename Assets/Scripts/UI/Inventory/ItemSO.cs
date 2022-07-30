@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PN.Equipment
+namespace PN.Inventory
 {
-
-    [CreateAssetMenu(fileName = "Item", menuName = "Inventory/Item", order = 0)]
-    public class ItemSO : ScriptableObject
+    public abstract class ItemSO : ScriptableObject
     {
         [SerializeField] int itemID;
         [SerializeField] string itemName;
-        [SerializeField] string itemDestription;
+        // [SerializeField] string itemDestription;
         [SerializeField] Sprite itemIcon;
 
         public Sprite GetSprite()

@@ -83,6 +83,7 @@ namespace PN.UI
 
         private void SwapItem(IDroppables slot, IDroppables parentSlot)
         {
+            if (!parentSlot.CheckItem(slot.GetItem())) return;
             //get reference to item before restting state
             var removedParentItem = parentSlot.GetItem();
             var removedDestItem = slot.GetItem();
