@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using PN.Equipment;
+using PN.Inventory;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,11 +10,11 @@ namespace PN.UI
     {
         [SerializeField] ItemIcon icon = null;
 
-        Inventory inventory;
+        PlayerInventory inventory;
         int index;
 
 
-        public void SetUp(Inventory inventory, int index)
+        public void SetUp(PlayerInventory inventory, int index)
         {
             this.index = index;
             this.inventory = inventory;

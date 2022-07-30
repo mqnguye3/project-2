@@ -1,6 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using PN.Equipment;
+using PN.Inventory;
 using UnityEngine;
 
 namespace PN.UI
@@ -9,24 +10,40 @@ namespace PN.UI
     {
         [SerializeField] ItemIcon icon;
         [SerializeField] EquipmentType equipmentType;
-        private EquipmentSO equipment;
+        private PlayerEquipment equipment;
 
+
+        private void Awake()
+        {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            equipment = player.GetComponent<PlayerEquipment>();
+            equipment.updateEquipment += UpdateEquipmentUI;
+        }
+
+        private void UpdateEquipmentUI()
+        {
+            icon.SetItemIcon(equipment.GetEquipmentInSlot(equipmentType));
+        }
+
+        private void Start()
+        {
+            UpdateEquipmentUI();
+        }
         public void AddItem(ItemSO item)
         {
-            equipment = item as EquipmentSO;
+            equipment.AddEquipmentToSlot(equipmentType, (EquipmentSO)item);
             icon.SetItemIcon(item);
         }
 
         public ItemSO GetItem()
         {
 
-            return equipment;
+            return equipment.GetEquipmentInSlot(equipmentType);
         }
 
         public void RemoveItem()
         {
-            equipment = null;
-            icon.SetItemIcon(null);
+            equipment.RemoveEquipmentInSlot(equipmentType);
         }
 
         public bool CheckItem(ItemSO item)

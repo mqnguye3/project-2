@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PN.Equipment
+namespace PN.Inventory
 {
 
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapon/New Weapon", order = 0)]
